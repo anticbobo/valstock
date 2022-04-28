@@ -1,1 +1,1 @@
-import { Image } from '~/dashboard/models/image.model';export interface Album {  id: number;  name: string;  images: Image[];}
+import { Image } from '~/dashboard/models/image.model';export interface Album {  id: number;  name: string;  images: Image[];  creationDate: string;}

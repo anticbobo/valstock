@@ -1,1 +1,1 @@
-<div class="masonry-grid-container">  <app-gallery [gallery]="gallery"></app-gallery></div>
+<div class="album-details">  <span class="album-name">{{ album.name }}</span>  <span class="creation-date">Date created: {{ album.creationDate | date: 'longDate' }}</span></div><div class="masonry-grid-container">  <app-gallery [gallery]="album.images"></app-gallery></div>

@@ -1,1 +1,1 @@
-@import "./../../../styles/helpers";
+@import "./../../../styles/helpers";.album-details {  display: flex;  flex-direction: column;  align-items: center;  margin: 2em 0;  .album-name {    font-size: 2.2em;    text-transform: capitalize;  }  .creation-date {    opacity: 0.5;    padding-top: 0.5em;  }}
