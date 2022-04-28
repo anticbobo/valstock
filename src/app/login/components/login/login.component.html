@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="main-content-wrapper">
+    <div class="header">
+      <h1>Join our stock community!</h1>
+      <h3>Download free photos and videos powered by the best photographers.</h3>
+    </div>
+    <div class="login">
+      <form [formGroup]="loginFormGroup">
+        <div class="form-field">
+          <span class="field-title">Username</span>
+          <mat-form-field appearance="fill" [floatLabel]="'never'">
+            <input
+              matInput
+              placeholder="Enter username here..."
+              required
+              formControlName="username"
+            />
+            <mat-error *ngIf="loginFormGroup.controls.username.hasError('required')">
+              Username is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <span class="field-title">Password</span>
+          <mat-form-field appearance="fill" [floatLabel]="'never'">
+            <input
+              matInput
+              placeholder="Enter password here"
+              [type]="viewPass ? 'text' : 'password'"
+              required
+              formControlName="password"
+            />
+            <mat-icon
+              class="eye-icon"
+              matSuffix
+              (click)="togglePassView()"
+            >
+              {{ viewPass ? 'visibility' : 'visibility_off' }}
+            </mat-icon>
+            <mat-error *ngIf="loginFormGroup.controls.password.hasError('required')">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="action-buttons">
+          <button
+            class="button-black"
+            mat-raised-button
+            [disabled]="isLoginFormInvalid"
+            (click)="login()"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="upper-footer"></div>
+    <div class="lower-footer"></div>
+    <mat-icon svgIcon="camera"> </mat-icon>
+  </footer>
+</div>

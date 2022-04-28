@@ -1,0 +1,1 @@
+figure {  margin: 0;  display: grid;  grid-template-rows: 1fr auto;  margin-bottom: 10px;  break-inside: avoid;  img {    grid-row: 1 / -1;    grid-column: 1;    max-width: 100%;    display: block;    cursor: pointer;  }}mat-spinner {  position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto;  width: 100px;}

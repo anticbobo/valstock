@@ -1,0 +1,1 @@
+<ng-container *ngIf="!!gallery && gallery.length > 0; else loading">  <figure *ngFor="let image of gallery">    <img      [src]="image.download_url"      (click)="redirectToImageDetails(image.id)"/>  </figure></ng-container><ng-template #loading>  <mat-spinner></mat-spinner></ng-template>

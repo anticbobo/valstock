@@ -1,0 +1,76 @@
+@import "./../../../styles/helpers";
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+
+  .main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 24em);
+
+    .header {
+      text-align: center;
+      margin-bottom: 3em;
+    }
+
+    .login {
+      .form-field {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: 13px;
+
+        .field-title {
+          text-align: center;
+          text-transform: uppercase;
+          margin-bottom: 0.5em;
+        }
+      }
+
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    height: 24em;
+    bottom: 0;
+    width: 100%;
+
+    .upper-footer {
+      height: 50%;
+    }
+
+    .lower-footer {
+      height: 50%;
+      background-color: black;
+    }
+
+    mat-icon {
+      position: fixed;
+      bottom: 10px;
+      height: 4em;
+      width: 6em;
+      font-size: 6em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+:host ::ng-deep {
+  .mat-form-field-wrapper {
+    width: 22em;
+  }
+  .mat-form-field-flex {
+    border: 2px solid;
+    border-radius: 0 !important;
+  }
+}
