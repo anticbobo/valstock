@@ -7,7 +7,7 @@ import { HandleImageDialogComponent } from './components/add-to-gallery-dialog/a
 import { HttpErrorInterceptor } from './errors/http-error.interceptor';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { MaterialModule } from './material.module';
-import { ErrorSnackbarService } from './services/error-snackbar.service';
+import { SnackBarService } from './services/snack-bar.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { ErrorSnackbarService } from './services/error-snackbar.service';
     CommonModule
   ],
   providers: [
-    ErrorSnackbarService,
+    SnackBarService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
   ],

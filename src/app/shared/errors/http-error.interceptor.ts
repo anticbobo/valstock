@@ -9,7 +9,7 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { ErrorSnackbarService } from '../services/error-snackbar.service';
+import { SnackBarService } from '../services/snack-bar.service';
 
 @Injectable({ providedIn: 'root' })
 export class HttpErrorInterceptor implements HttpInterceptor {
@@ -18,7 +18,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
 
   constructor(
     private http: HttpClient,
-    private errorSnackbarService: ErrorSnackbarService
+    private errorSnackbarService: SnackBarService
   ) {}
 
   intercept(

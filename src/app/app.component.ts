@@ -11,6 +11,7 @@ import { IconsService } from '~/shared/services/icons.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  public title = "vt-assignment";
   public availableAlbums$: Observable<Album[]>;
 
   constructor(
